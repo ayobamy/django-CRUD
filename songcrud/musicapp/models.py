@@ -2,12 +2,12 @@ from django.db import models
 from django.db.models import Model
 
 # Create your models here.
-class Song(models.Model):
+class Song(Model):
     pass
 
-class Artiste(models.Model):
+class Artiste(Model):
     pass
 
-class Lyrics(models.Model):
+class Lyrics(Model):
     pass
 
