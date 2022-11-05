@@ -4,14 +4,14 @@ from musicapp.models import Song, Artiste, Lyrics
 class SongSerializer(serializers.ModelSerializer):
     class Meta:
         model = Song
-        fields = ('title')
+        fields = "__all__"
 
 class ArtistSerializer(serializers.ModelSerializer):
     class Meta:
         model = Artiste
-        fields = ('first_name', 'last_name')
+        fields = "__all__"
 
 class LyricsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Lyrics
-        fields = ('lyrics',)
+        fields = "__all__"

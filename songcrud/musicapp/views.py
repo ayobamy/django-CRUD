@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework import viewsets
-from musicapp.serializers import SongSerializer, ArtistSerializer
+from musicapp.serializers import SongSerializer, ArtistSerializer, LyricsSerializer
 from musicapp.models import Song, Artiste, Lyrics
 
 class SongViewSet(viewsets.ModelViewSet):
@@ -12,3 +12,7 @@ class SongViewSet(viewsets.ModelViewSet):
 class ArtisteViewSet(viewsets.ModelViewSet):
     queryset = Artiste.objects.all().order_by('first_name')
     serializer_class = ArtistSerializer
+
+class LyricsViewSet(viewsets.ModelViewSet):
+    queryset = Lyrics.objects.all()
+    serializer_class = LyricsSerializer
