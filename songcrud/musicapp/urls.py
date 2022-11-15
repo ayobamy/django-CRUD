@@ -5,6 +5,7 @@ from musicapp import views
 router = routers.DefaultRouter()
 router.register(r'artistes', views.ArtisteViewSet)
 router.register(r'songs', views.SongViewSet)
+router.register(r'lyrics', views.LyricsViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
